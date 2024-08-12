@@ -35,6 +35,45 @@ namespace ProjetoMosquitoVelho
             //this.Close();
                      Application.Exit();
         }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text.Equals("senac")&&txtSenha.Text.Equals("senac"))
+            {
+               MenuPrincipal abrir = new MenuPrincipal();
+                abrir.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuário ou Senha incorretos");
+                limparCampos();
+            }
+        }
+    
+    public void limparCampos()
+        {
+            txtUsuario.Clear();
+            txtSenha.Clear();
+            txtUsuario.Focus();
+               
+        }
+
+        private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                txtSenha.Focus();
+            }
+        }
+
+        private void txtSenha_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnEntrar.Focus();
+            }
+        }
     }
 }
   
