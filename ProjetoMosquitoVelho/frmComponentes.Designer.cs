@@ -49,17 +49,17 @@ namespace ProjetoMosquitoVelho
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(8, 24);
+            this.checkBox1.Location = new System.Drawing.Point(17, 36);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(51, 24);
+            this.checkBox1.Size = new System.Drawing.Size(61, 24);
             this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Ler";
+            this.checkBox1.Text = "Livro";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(8, 54);
+            this.checkBox2.Location = new System.Drawing.Point(17, 70);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(77, 24);
             this.checkBox2.TabIndex = 1;
@@ -69,7 +69,7 @@ namespace ProjetoMosquitoVelho
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(8, 88);
+            this.checkBox3.Location = new System.Drawing.Point(17, 107);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(75, 24);
             this.checkBox3.TabIndex = 2;
@@ -79,7 +79,7 @@ namespace ProjetoMosquitoVelho
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(8, 124);
+            this.checkBox4.Location = new System.Drawing.Point(17, 144);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(62, 24);
             this.checkBox4.TabIndex = 3;
@@ -89,7 +89,7 @@ namespace ProjetoMosquitoVelho
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 39);
+            this.radioButton1.Location = new System.Drawing.Point(49, 30);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(67, 24);
             this.radioButton1.TabIndex = 4;
@@ -100,7 +100,7 @@ namespace ProjetoMosquitoVelho
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 68);
+            this.radioButton2.Location = new System.Drawing.Point(49, 64);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(74, 24);
             this.radioButton2.TabIndex = 5;
@@ -111,7 +111,7 @@ namespace ProjetoMosquitoVelho
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(6, 102);
+            this.radioButton3.Location = new System.Drawing.Point(49, 101);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(67, 24);
             this.radioButton3.TabIndex = 6;
@@ -122,7 +122,7 @@ namespace ProjetoMosquitoVelho
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(6, 138);
+            this.radioButton4.Location = new System.Drawing.Point(49, 138);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(66, 24);
             this.radioButton4.TabIndex = 7;
@@ -132,7 +132,6 @@ namespace ProjetoMosquitoVelho
             // 
             // listBox1
             // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
@@ -143,14 +142,13 @@ namespace ProjetoMosquitoVelho
             "Sentar",
             "Levantar",
             "Treinar"});
-            this.listBox1.Location = new System.Drawing.Point(362, 86);
+            this.listBox1.Location = new System.Drawing.Point(443, 20);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 184);
+            this.listBox1.Size = new System.Drawing.Size(143, 164);
             this.listBox1.TabIndex = 8;
             // 
             // comboBox1
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -159,13 +157,13 @@ namespace ProjetoMosquitoVelho
             "Voley",
             "Golf",
             "Truco",
+            "Uno",
             "Sinuca",
             "Dominó"});
-            this.comboBox1.Location = new System.Drawing.Point(493, 86);
+            this.comboBox1.Location = new System.Drawing.Point(12, 232);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.Size = new System.Drawing.Size(149, 28);
             this.comboBox1.TabIndex = 9;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -174,33 +172,31 @@ namespace ProjetoMosquitoVelho
             this.groupBox1.Controls.Add(this.checkBox3);
             this.groupBox1.Controls.Add(this.checkBox4);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 86);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(202, 185);
+            this.groupBox1.Size = new System.Drawing.Size(160, 181);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Escolha";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.radioButton4);
             this.groupBox2.Controls.Add(this.radioButton1);
             this.groupBox2.Controls.Add(this.radioButton2);
             this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Controls.Add(this.radioButton4);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(226, 86);
+            this.groupBox2.Location = new System.Drawing.Point(208, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(130, 185);
+            this.groupBox2.Size = new System.Drawing.Size(172, 181);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Voce prefere?";
+            this.groupBox2.Text = "Você prefere";
             // 
             // frmComponentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -210,9 +206,9 @@ namespace ProjetoMosquitoVelho
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmComponentes";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SistemaABC - Componentes";
-            this.Load += new System.EventHandler(this.frmComponentes_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

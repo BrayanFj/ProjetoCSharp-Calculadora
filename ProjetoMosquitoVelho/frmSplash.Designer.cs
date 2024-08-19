@@ -29,68 +29,74 @@ namespace ProjetoMosquitoVelho
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSplash));
             this.pctLogo = new System.Windows.Forms.PictureBox();
             this.lblNumero = new System.Windows.Forms.Label();
-            this.pgbProgresso = new System.Windows.Forms.ProgressBar();
             this.lblPorcentagem = new System.Windows.Forms.Label();
+            this.pgbProgresso = new System.Windows.Forms.ProgressBar();
+            this.tmrSplash = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pctLogo
             // 
             this.pctLogo.Image = ((System.Drawing.Image)(resources.GetObject("pctLogo.Image")));
-            this.pctLogo.Location = new System.Drawing.Point(236, 12);
+            this.pctLogo.Location = new System.Drawing.Point(302, 81);
             this.pctLogo.Name = "pctLogo";
-            this.pctLogo.Size = new System.Drawing.Size(323, 260);
-            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctLogo.Size = new System.Drawing.Size(244, 180);
+            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctLogo.TabIndex = 0;
             this.pctLogo.TabStop = false;
             // 
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
-            this.lblNumero.Location = new System.Drawing.Point(378, 301);
+            this.lblNumero.Location = new System.Drawing.Point(403, 278);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(13, 13);
             this.lblNumero.TabIndex = 1;
             this.lblNumero.Text = "0";
-            this.lblNumero.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // pgbProgresso
-            // 
-            this.pgbProgresso.Location = new System.Drawing.Point(259, 333);
-            this.pgbProgresso.Name = "pgbProgresso";
-            this.pgbProgresso.Size = new System.Drawing.Size(261, 19);
-            this.pgbProgresso.Step = 1;
-            this.pgbProgresso.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.pgbProgresso.TabIndex = 2;
-            this.pgbProgresso.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // lblPorcentagem
             // 
             this.lblPorcentagem.AutoSize = true;
-            this.lblPorcentagem.Location = new System.Drawing.Point(391, 301);
+            this.lblPorcentagem.Location = new System.Drawing.Point(422, 278);
             this.lblPorcentagem.Name = "lblPorcentagem";
             this.lblPorcentagem.Size = new System.Drawing.Size(15, 13);
-            this.lblPorcentagem.TabIndex = 3;
+            this.lblPorcentagem.TabIndex = 2;
             this.lblPorcentagem.Text = "%";
+            // 
+            // pgbProgresso
+            // 
+            this.pgbProgresso.Location = new System.Drawing.Point(305, 305);
+            this.pgbProgresso.Name = "pgbProgresso";
+            this.pgbProgresso.Size = new System.Drawing.Size(241, 26);
+            this.pgbProgresso.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.pgbProgresso.TabIndex = 3;
+            // 
+            // tmrSplash
+            // 
+            this.tmrSplash.Enabled = true;
+            this.tmrSplash.Interval = 10;
+            this.tmrSplash.Tick += new System.EventHandler(this.tmrSplash_Tick);
             // 
             // frmSplash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblPorcentagem);
             this.Controls.Add(this.pgbProgresso);
             this.Controls.Add(this.lblNumero);
             this.Controls.Add(this.pctLogo);
+            this.Controls.Add(this.lblPorcentagem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmSplash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MOS-Splash";
+            this.Load += new System.EventHandler(this.frmSplash_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -101,7 +107,8 @@ namespace ProjetoMosquitoVelho
 
         private System.Windows.Forms.PictureBox pctLogo;
         private System.Windows.Forms.Label lblNumero;
-        private System.Windows.Forms.ProgressBar pgbProgresso;
         private System.Windows.Forms.Label lblPorcentagem;
+        private System.Windows.Forms.ProgressBar pgbProgresso;
+        private System.Windows.Forms.Timer tmrSplash;
     }
 }

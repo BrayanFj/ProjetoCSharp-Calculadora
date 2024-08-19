@@ -16,89 +16,78 @@ namespace ProjetoMosquitoVelho
         {
             InitializeComponent();
         }
+
         //limparCampos
-        public void LimparCampos()
+        public void limparCampos()
         {
             txtValor1.Clear();
             txtValor2.Clear();
             lblResposta.Text = "";
-            rdbSomar.Checked = false;
+            rdbsomar.Checked = false;
             rdbSubtrair.Checked = false;
             rdbMultiplicar.Checked = false;
-            rdbdividir.Checked = false;
+            rdbDividir.Checked = false;
             txtValor1.Focus();
-        }
-
-
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
+            double num1, num2, resp = 0;
 
             try
             {
+                num1 = Convert.ToDouble(txtValor1.Text);
+                num2 = Convert.ToDouble(txtValor2.Text);
 
-                double num1;
-                double num2; 
-                double resp = 0;
-
-                num1 = Convert.ToDouble(txtValor1);
-                num2 = Convert.ToDouble(txtValor2);
-
-                //instaciar a classe/objeto
+                //instânciar o objeto/classe
                 Operacoes op = new Operacoes();
-                if (rdbSomar.Checked)
-                {
-                    resp = op.somaValor(num1, num2);
-                }
 
+                if (rdbsomar.Checked)
+                {
+                    resp = op.somar(num1, num2);
+                }
                 if (rdbSubtrair.Checked)
                 {
-                    resp = op.SubtrairValor(num1, num2);
+                    resp = op.subtrair(num1, num2);
                 }
-
                 if (rdbMultiplicar.Checked)
                 {
-                    resp = op.MultiplicarValor(num1, num2);
+                    resp = op.multiplicar(num1, num2);
                 }
-
-                if (rdbdividir.Checked)
+                if (rdbDividir.Checked)
                 {
                     if (num2 == 0)
                     {
-                        MessageBox.Show("Não é possível dividir por 0", "SistemaABC", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-                        //executar o metodo limparCampos
-                        LimparCampos();
+                        MessageBox.Show("Impossível divisão por 0",
+                            "SistemaABC",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning,
+                            MessageBoxDefaultButton.Button1);
+                        //executar o método limparCampos
+                        limparCampos();
 
                     }
                     else
                     {
-                        resp = op.DividirValor(num1, num2);
-                    }
-                }
+                        resp = op.dividir(num1, num2);
 
-                lblResposta.Text = resp.ToString();
+                    }
+
+                    lblResposta.Text = resp.ToString();
+                }
             }
             catch (Exception)
             {
-                MessageBox.Show("Insira um valor ou somente números");
-                throw;
+
+                MessageBox.Show("Insira somente números");
             }
 
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            LimparCampos();
+            //executando o método limparCampos
+            limparCampos();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -107,4 +96,3 @@ namespace ProjetoMosquitoVelho
         }
     }
 }
-

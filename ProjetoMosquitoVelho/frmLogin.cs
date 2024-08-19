@@ -7,56 +7,54 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace ProjetoMosquitoVelho
 {
     public partial class frmLogin : Form
     {
+        //Criando variáveis para controle do menu
+        const int MF_BYCOMMAND = 0X400;
+        [DllImport("user32")]
+        static extern int RemoveMenu(IntPtr hMenu, int nPosition, int wFlags);
+        [DllImport("user32")]
+        static extern IntPtr GetSystemMenu(IntPtr hWnd, bool bRevert);
+        [DllImport("user32")]
+        static extern int GetMenuItemCount(IntPtr hWnd);
+
         public frmLogin()
         {
-           InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-     
-
-        private void fmrLogin_Load(object sender, EventArgs e)
-        {
+            InitializeComponent();
 
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            //Close()
-            //this.Close();
-                     Application.Exit();
+            /*
+            Close();
+            this.Close();*/
+            Application.Exit();
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text.Equals("senac")&&txtSenha.Text.Equals("senac"))
+            if (txtUsuario.Text.Equals("senac") && txtSenha.Text.Equals("senac"))
             {
-               MenuPrincipal abrir = new MenuPrincipal();
+                frmMenuPrincipal abrir = new frmMenuPrincipal();
                 abrir.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Usuário ou Senha incorretos");
+                MessageBox.Show("Usuário ou senha inválidos!!!");
                 limparCampos();
             }
         }
-    
-    public void limparCampos()
+        public void limparCampos()
         {
             txtUsuario.Clear();
             txtSenha.Clear();
             txtUsuario.Focus();
-               
         }
 
         private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
@@ -74,6 +72,12 @@ namespace ProjetoMosquitoVelho
                 btnEntrar.Focus();
             }
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            IntPtr hMenu = GetSystemMenu(this.Handle, false);
+            int MenuCount = GetMenuItemCount(hMenu) - 1;
+            RemoveMenu(hMenu, MenuCount, MF_BYCOMMAND);
+        }
     }
 }
-  
