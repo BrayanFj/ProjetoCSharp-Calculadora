@@ -81,18 +81,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bilhete.cs" />
-    <Compile Include="frmCalculadora.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCalculadora.Designer.cs">
-      <DependentUpon>frmCalculadora.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCalculos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCalculos.Designer.cs">
-      <DependentUpon>frmCalculos.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmComponentes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,17 +129,10 @@
     <Compile Include="frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
-    <Compile Include="Operacoes.cs" />
     <Compile Include="Passageiro.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmCalculadora.resx">
-      <DependentUpon>frmCalculadora.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCalculos.resx">
-      <DependentUpon>frmCalculos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmComponentes.resx">
       <DependentUpon>frmComponentes.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,7 +163,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="ProjetoMosquitoVelho_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
